@@ -6,15 +6,123 @@
 	<link rel="stylesheet" type="text/css" href="css/uikit.min.css">
 	<script type="text/javascript" src='http://cdn.bootcss.com/jquery/1.7/jquery.min.js'></script>
 	<script type="text/javascript" src='js/uikit.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/addons/uikit.addons.css">
+	<script type="text/javascript" src='js/addons/notify.js'></script>
 </head>
+<script type="text/javascript">
+	$(function(){
+		$('.jintest').click(function(){
+			$.UIkit.notify({
+			message : 'Bazinga!',
+			status  : 'warning',
+			timeout : 5000,
+			pos     : 'top-right'
+		});
+
+		});
+		//$("body").on("click", ".uk-button[data-message]", function(){
+		//	$.UIkit.notify($(this).data());
+		//});		
+		//$('body').on('click','.uk-button[data-message]',function(){
+		//	$UIkit.notify($(this).data());
+		//});
+	/*$.UIkit.notify('My message');
+	$.UIkit.notify('My message',status);
+	$.UIkit.notify('My message',{ options });*/
+	})
+</script>
 <body>
+<div class="uk-container uk-container-center uk-margin-top">
 	<div class="uk-grid">
-		<div class="uk-width-medium-1-2" style="border:1px solid #000">
-			...
+		<div class="uk-width-medium-1-2">
+			<div class="uk-panel uk-panel-box uk-panel-box-secondary">
+				<div class="uk-panel-badge uk-badge">
+				</div>
+				<h3 class="uk-panel-title">title</h3>
+			</div>
+			<ul class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav>
+				<li class="uk-active"><a href="#">首页</a></li>
+				<li><a href="#">相册</a></li>
+				<li><a href="#">关于</a></li>
+				<li class="uk-parent"><a href="#">教程</a>
+					<ul class="uk-nav-sub">
+						<li><a href="#">PHP教程</a></li>
+						<li><a href="#">Python教程</a></li>
+						<li><a href="#">Mysql教程</a></li>
+						<li><a href="#">Shell教程</a></li>
+					</ul>
+				</li>
+			</ul>
+			<button class="uk-button jintest" data-uk-tooltip title="我是劲松">Click me</button>
+			<form class="uk-form">
+    		<div class="uk-form-password">
+      		  <input type="password">
+	      	  <a href="" class="uk-form-password-toggle" data-uk-form-password>...</a>
+	  		  </div>
+			</form>
 		</div>
-		<div class="uk-width-medium-1-2" style="border:1px solid #000">
-			...
+		<div class="uk-width-medium-1-2">
+			<article class='uk-article'>
+				<h1 class="uk-article-title">Article title</h1>
+				<p class="uk-article-meta">Written by Super User on 12 April 2012. Posted in Blog</p>
+				<p class="uk-article-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</article>
+			<ul class="uk-comment-list">
+				<li>
+				<article class='uk-comment uk-comment-primary'>
+				<header class='uk-comment-header'>
+					<img class="uk-comment-avatar" src="img/placeholder_avatar.svg" alt="">
+					<h4 class="uk-comment-title">Author</h4>
+					<div class="uk-comment-meta">12 days ago | Profile | #</div>
+				</header>
+				<div class="uk-comment-body">
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				</div>
+				</article>
+				</li>
+				<li>
+				<article class='uk-comment'>
+				<header class='uk-comment-header'>
+					<img class="uk-comment-avatar" src="img/placeholder_avatar.svg" alt="">
+					<h4 class="uk-comment-title">Author</h4>
+					<div class="uk-comment-meta">12 days ago | Profile | #</div>
+				</header>
+				<div class="uk-comment-body">
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				</div>
+				</article>
+			<ul>
+				<li>
+				<article class='uk-comment uk-comment-primary'>
+				<header class='uk-comment-header'>
+					<img class="uk-comment-avatar" src="img/placeholder_avatar.svg" alt="">
+					<h4 class="uk-comment-title">Author</h4>
+					<div class="uk-comment-meta">12 days ago | Profile | #</div>
+				</header>
+				<div class="uk-comment-body">
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				</div>
+				</article>
+				</li>
+				<li>
+				<article class='uk-comment uk-comment-primary'>
+				<header class='uk-comment-header'>
+					<img class="uk-comment-avatar" src="img/placeholder_avatar.svg" alt="">
+					<h4 class="uk-comment-title">Author</h4>
+					<div class="uk-comment-meta">12 days ago | Profile | #</div>
+				</header>
+				<div class="uk-comment-body">
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				</div>
+				</article>
+				</li>
+			</ul>				
+				</li>				
+			</ul>
 		</div>
+
 	</div>
+</div>
 </body>
 </html>
